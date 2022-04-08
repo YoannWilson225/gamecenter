@@ -25,7 +25,16 @@
     <link href="boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="boxicons/css/boxicons.css" rel="stylesheet">
 
-   
+   <style>
+     #links {
+       color: #fff;
+     }
+
+     #links:hover {
+       color: #BE4AFB;
+       transition: all 1s;
+     }
+   </style>
     
     <link rel="stylesheet" media="screen" href="css/simplebar.min.css"/>
     <link rel="stylesheet" media="screen" href="css/tiny-slider.css"/>
@@ -47,9 +56,9 @@
       <iframe src="//www.googletagmanager.com/ns.html?id=GTM-WKV3GT5" height="0" width="0" style="display: none; visibility: hidden;"></iframe>
     </noscript>
     <!-- Sign in / sign up modal-->
-    <div class="modal fade" id="signin-modal" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
+    <div class="modal fade" id="signin-modal" tabindex="-1" role="dialog" >
+      <div class="modal-dialog modal-dialog-centered" role="document" >
+        <div class="modal-content" >
           <div class="modal-header bg-secondary">
             <ul class="nav nav-tabs card-header-tabs" role="tablist">
               <li class="nav-item"><a class="nav-link fw-medium active" href="#signin-tab" data-bs-toggle="tab" role="tab" aria-selected="true"><i class="bi-unlocked me-2 mt-n1"></i>Sign in</a></li>
@@ -116,21 +125,22 @@
         </div>
       </div>
     </div>
-    <main class="page-wrapper" style="background-color:#1B1120;">
+    <main class="page-wrapper">
       <!-- Navbar 3 Level (Light)-->
       <header class="shadow-sm">
         <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
         <div class="navbar-sticky bg-light">
           <div class="navbar navbar-expand-lg navbar-light" style="background-color: #000008;">
-            <div class="container"><a class="navbar-brand d-none d-sm-block flex-shrink-0" href="index.html" style="color: #BE4AFB;">GameCenter</a><a class="navbar-brand d-sm-none flex-shrink-0 me-2" href="index.html"><img src="img/logo-icon.png" width="74" alt="GameCenter"></a>
+            <div class="container"><a class="navbar-brand d-none d-sm-block flex-shrink-0" href="index.html"><img src="img/logo-dark.png" width="142" alt="GameCenter"></a><a class="navbar-brand d-sm-none flex-shrink-0 me-2" href="index.html"><img src="img/logo-icon.png" width="74" alt="GameCenter"></a>
+  
               <div class="input-group d-none d-lg-flex mx-4">
                 <input class="form-control rounded-end pe-5" type="text" placeholder="Recherche" style="border: 1px solid #BE4AFB;background-color: transparent;"><i class="bi-search position-absolute top-50 end-0 translate-middle-y text-muted fs-base me-3"></i>
               </div>
               <div class="navbar-toolbar d-flex flex-shrink-0 align-items-center">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"><span class="navbar-toggler-icon"></span></button><a class="navbar-tool navbar-stuck-toggler" href="#"><span class="navbar-tool-tooltip">Expand menu</span>
-                  <div class="navbar-tool-icon-box"><i class="navbar-tool-icon bi-menu"></i></div></a><a class="navbar-tool d-none d-lg-flex" href="account-wishlist.html"><span class="navbar-tool-tooltip">Wishlist</span>
+                  <div class="navbar-tool-icon-box"><i class="navbar-tool-icon bi-menu"></i></div></a><a class="navbar-tool d-none d-lg-flex" href="account-wishlist.html"><span class="navbar-tool-tooltip">Souhaits</span>
                   <div class="navbar-tool-icon-box"><i class="navbar-tool-icon bi-heart"></i></div></a><a class="navbar-tool ms-1 ms-lg-0 me-n1 me-lg-2" href="#signin-modal" data-bs-toggle="modal">
-                  <div class="navbar-tool-icon-box"><i class="navbar-tool-icon bi-user"></i></div>
+                  <div class="navbar-tool-icon-box"><i class="navbar-tool-icon bi bi-person"></i></div>
                   <div class="navbar-tool-text ms-n3"><small>Bonjour, Sign in</small>Mon Compte</div></a>
                 <div class="navbar-tool dropdown ms-3"><a class="navbar-tool-icon-box bg-secondary dropdown-toggle" href="shop-cart.html"><span class="navbar-tool-label">4</span><i class="navbar-tool-icon bi-cart"></i></a><a class="navbar-tool-text" href="shop-cart.html"><small>Panier</small>$265.00</a>
                   <!-- Cart dropdown-->
@@ -183,7 +193,7 @@
               </div>
             </div>
           </div>
-          <div class="navbar navbar-expand-lg navbar-light navbar-stuck-menu mt-n2 pt-0 pb-2">
+          <div class="navbar navbar-expand-lg navbar-light navbar-stuck-menu mt-n2 pt-0 pb-2" style="background-color:#000008;">
             <div class="container">
               <div class="collapse navbar-collapse" id="navbarCollapse">
                 <!-- Search-->
@@ -192,7 +202,7 @@
                 </div>
                 <!-- Departments menu-->
                 <ul class="navbar-nav navbar-mega-nav pe-lg-2 me-lg-2">
-                  <li class="nav-item dropdown"><a class="nav-link dropdown-toggle ps-lg-0" href="#" data-bs-toggle="dropdown"><i class="bi-view-grid me-2"></i>Cathégorie</a>
+                  <li class="nav-item dropdown"><a class="nav-link dropdown-toggle ps-lg-0" id="links" href="#" data-bs-toggle="dropdown"><i class="bi bi-grid me-2"></i>Catégorie</a>
                     <div class="dropdown-menu px-2 pb-4">
                       <div class="d-flex flex-wrap flex-sm-nowrap">
                         <div class="mega-dropdown-column pt-3 pt-sm-4 px-2 px-lg-3">
@@ -263,10 +273,10 @@
                 </ul>
                 <!-- Primary menu-->
                 <ul class="navbar-nav">
-                  <li class="nav-item active"><a class="nav-link toggle" href="#" data-bs-toggle="dropdown">Accueil</a>
+                  <li class="nav-item active"><a class="nav-link toggle" id="links" href="#" data-bs-toggle="dropdown">Accueil</a>
                   
                   </li>
-                  <li class="nav-item"><a class="nav-link toggle" href="#" data-bs-toggle="dropdown">Boutique</a>
+                  <li class="nav-item"><a class="nav-link toggle" href="#" data-bs-toggle="dropdown" id="links">Boutique</a>
                     <div class="dropdown-menu p-0">
                       <div class="d-flex flex-wrap flex-sm-nowrap px-2">
                         <div class="mega-dropdown-column pt-1 pt-lg-4 pb-4 px-2 px-lg-3">
@@ -345,7 +355,7 @@
                       </div>
                     </div>
                   </li>
-                  <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Compte</a>
+                  <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="links" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Compte</a>
                     <ul class="dropdown-menu">
                       <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Utilisateur Compte</a>
                         <ul class="dropdown-menu">
@@ -375,19 +385,6 @@
         <div class="tns-carousel-inner" data-carousel-options="{&quot;mode&quot;: &quot;gallery&quot;, &quot;responsive&quot;: {&quot;0&quot;:{&quot;nav&quot;:true, &quot;controls&quot;: false},&quot;992&quot;:{&quot;nav&quot;:false, &quot;controls&quot;: true}}}">
           <!-- Item-->
           <div class="px-lg-5" style="background-color: #000008;">
-            <div class="d-lg-flex justify-content-between align-items-center ps-lg-4"><img class="d-block order-lg-2 me-lg-n5 flex-shrink-0" src="img/01.jpg" alt="Women Sportswear">
-              <div class="position-relative mx-auto me-lg-n5 py-5 px-4 mb-lg-5 order-lg-1" style="max-width: 42rem; z-index: 10;">
-                <div class="pb-lg-5 mb-lg-5 text-center text-lg-start text-lg-nowrap">
-                  <h3 class="h2 text-light fw-light pb-1 from-bottom">Super ! Découvrer nos nouveaux casques.</h3>
-                  <h2 class="text-light display-5 from-bottom delay-1"><span style="color:#BE4AFB">Casque VR</span></h2>
-                  <p class="fs-lg text-light pb-3 from-bottom delay-2">HDMI, Port Usb, Ps5, Ps4 &amp; ...</p>
-                  <div class="d-table scale-up delay-4 mx-auto mx-lg-0"><a class="btn btn-primary"  style="background-color:transparent;border: 1px solid #BE4AFB;border-radius: 15px;" href="shop-grid-ls.html"><span style="color:#BE4AFB">Acheter</span><i class="bi-arrow-right ms-2 me-n1" style="color:#BE4AFB;"></i></a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Item-->
-          <div class="px-lg-5" style="background-color: #000008;">
             <div class="d-lg-flex justify-content-between align-items-center ps-lg-4"><img class="d-block order-lg-2 me-lg-n5 flex-shrink-0" src="img/02.jpg" alt="Summer Collection">
               <div class="position-relative mx-auto me-lg-n5 py-5 px-4 mb-lg-5 order-lg-1" style="max-width: 42rem; z-index: 10;">
                 <div class="pb-lg-5 mb-lg-5 text-center text-lg-start text-lg-nowrap">
@@ -399,7 +396,7 @@
               </div>
             </div>
           </div>
-          <!-- Item-->
+           <!-- Item-->
           <div class="px-lg-5" style="background-color: #000008;">
             <div class="d-lg-flex justify-content-between align-items-center ps-lg-4"><img class="d-block order-lg-2 me-lg-n5 flex-shrink-0" src="img/03.jpg" alt="Men Accessories">
               <div class="position-relative mx-auto me-lg-n5 py-5 px-4 mb-lg-5 order-lg-1" style="max-width: 42rem; z-index: 10;">
@@ -412,6 +409,19 @@
               </div>
             </div>
           </div>
+          <!-- Item-->
+          <div class="px-lg-5" style="background-color: #000008;">
+            <div class="d-lg-flex justify-content-between align-items-center ps-lg-4"><img class="d-block order-lg-2 me-lg-n5 flex-shrink-0" src="img/01.jpg" alt="Women Sportswear">
+              <div class="position-relative mx-auto me-lg-n5 py-5 px-4 mb-lg-5 order-lg-1" style="max-width: 42rem; z-index: 10;">
+                <div class="pb-lg-5 mb-lg-5 text-center text-lg-start text-lg-nowrap">
+                  <h3 class="h2 text-light fw-light pb-1 from-bottom">Super ! Découvrer nos nouveaux casques.</h3>
+                  <h2 class="text-light display-5 from-bottom delay-1"><span style="color:#BE4AFB">Casque VR</span></h2>
+                  <p class="fs-lg text-light pb-3 from-bottom delay-2">HDMI, Port Usb, Ps5, Ps4 &amp; ...</p>
+                  <div class="d-table scale-up delay-4 mx-auto mx-lg-0"><a class="btn btn-primary"  style="background-color:transparent;border: 1px solid #BE4AFB;border-radius: 15px;" href="shop-grid-ls.html"><span style="color:#BE4AFB">Acheter</span><i class="bi-arrow-right ms-2 me-n1" style="color:#BE4AFB;"></i></a></div>
+                </div>
+              </div>
+            </div>
+          </div> 
         </div>
       </section>
       <!-- Category (Casque)-->
@@ -1188,7 +1198,7 @@
     <!-- Footer-->
     <footer class="footer bg-dark pt-5">
       <div class="container">
-        <div class="row pb-2">
+        <div class="row pb-2" >
           <div class="col-md-4 col-sm-6">
             <div class="widget widget-links widget-light pb-2 mb-4">
               <h3 class="widget-title text-light">Catégories</h3>
@@ -1198,14 +1208,6 @@
                 <li class="widget-list-item"><a class="widget-list-link" href="#">Sandals</a></li>
                 <li class="widget-list-item"><a class="widget-list-link" href="#">Jeans</a></li>
                 <li class="widget-list-item"><a class="widget-list-link" href="#">Shirts &amp; Tops</a></li>
-                <li class="widget-list-item"><a class="widget-list-link" href="#">Shorts</a></li>
-                <li class="widget-list-item"><a class="widget-list-link" href="#">T-Shirts</a></li>
-                <li class="widget-list-item"><a class="widget-list-link" href="#">Swimwear</a></li>
-                <li class="widget-list-item"><a class="widget-list-link" href="#">Clogs &amp; Mules</a></li>
-                <li class="widget-list-item"><a class="widget-list-link" href="#">Bags &amp; Wallets</a></li>
-                <li class="widget-list-item"><a class="widget-list-link" href="#">Accessories</a></li>
-                <li class="widget-list-item"><a class="widget-list-link" href="#">Sunglasses &amp; Eyewear</a></li>
-                <li class="widget-list-item"><a class="widget-list-link" href="#">Watches</a></li>
               </ul>
             </div>
           </div>
@@ -1257,52 +1259,10 @@
           </div>
         </div>
       </div>
-      <div class="pt-5 bg-darker">
-        <div class="container">
-          <div class="row pb-3">
-            <div class="col-md-3 col-sm-6 mb-4">
-              <div class="d-flex"><i class="bi-rocket text-primary" style="font-size: 2.25rem;"></i>
-                <div class="ps-3">
-                  <h6 class="fs-base text-light mb-1">Fast and free delivery</h6>
-                  <p class="mb-0 fs-ms text-light opabity-50">Free delivery for all orders over $200</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-6 mb-4">
-              <div class="d-flex"><i class="bi-currency-exchange text-primary" style="font-size: 2.25rem;"></i>
-                <div class="ps-3">
-                  <h6 class="fs-base text-light mb-1">Money back guarantee</h6>
-                  <p class="mb-0 fs-ms text-light opabity-50">We return money within 30 days</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-6 mb-4">
-              <div class="d-flex"><i class="bi-support text-primary" style="font-size: 2.25rem;"></i>
-                <div class="ps-3">
-                  <h6 class="fs-base text-light mb-1">24/7 customer support</h6>
-                  <p class="mb-0 fs-ms text-light opabity-50">Friendly 24/7 customer support</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-6 mb-4">
-              <div class="d-flex"><i class="bi-card text-primary" style="font-size: 2.25rem;"></i>
-                <div class="ps-3">
-                  <h6 class="fs-base text-light mb-1">Secure online payment</h6>
-                  <p class="mb-0 fs-ms text-light opabity-50">We possess SSL / Secure сertificate</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <hr class="hr-light mb-5">
-          <div class="row pb-2">
-            <div class="col-md-6 text-center text-md-start mb-4">
-              <div class="text-nowrap mb-4"><a class="d-inline-block align-middle mt-n1 me-3" href="#">GameCenter</a>
-               
-              </div>
-              
+
             </div>
             <div class="col-md-6 text-center text-md-end mb-4">
-              <div class="mb-3"><a class="btn-sobial bs-light bs-twitter ms-2 mb-2" href="#"><i class="bi-twitter"></i></a><a class="btn-sobial bs-light bs-facebook ms-2 mb-2" href="#"><i class="bi-facebook"></i></a><a class="btn-sobial bs-light bs-instagram ms-2 mb-2" href="#"><i class="bi-instagram"></i></a><a class="btn-sobial bs-light bs-pinterest ms-2 mb-2" href="#"><i class="bi-pinterest"></i></a><a class="btn-sobial bs-light bs-youtube ms-2 mb-2" href="#"><i class="bi-youtube"></i></a></div><img class="d-inline-block" src="img/cards-alt.png" width="187" alt="Payment methods">
+              <div class="mb-3"><a class="btn-sobial bs-light bs-twitter ms-2 mb-2" href="#"><i class="bi-twitter"></i></a><a class="btn-sobial bs-light bs-facebook ms-2 mb-2" href="#"><i class="bi-facebook"></i></a><a class="btn-sobial bs-light bs-instagram ms-2 mb-2" href="#"><i class="bi-instagram"></i></a><a class="btn-sobial bs-light bs-pinterest ms-2 mb-2" href="#"><i class="bi-pinterest"></i></a><a class="btn-sobial bs-light bs-youtube ms-2 mb-2" href="#"><i class="bi-youtube"></i></a></div>
             </div>
           </div>
           <div class="pb-4 fs-xs text-light opabity-50 text-center text-md-start">© All rights reserved. Made by <a class="text-light" href="https://createx.studio/" target="_blank" rel="noopener">Createx Studio</a></div>
